@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import {ApiService} from '../api.service';
-// import {CustomerService} from '../customer.service';
 import { ILogin } from 'src/app/login';  
 import {Router} from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';  
@@ -54,23 +52,5 @@ export class LoginComponent implements OnInit {
        }  
       }  
    }  
-  // tryLogin() {
-  //   this.api.login(
-  //     this.email,
-  //     this.password
-  //   )
-  //     .subscribe(
-  //       r => {
-  //         if (r.token) {
-  //           this.customer.setToken(r.token);
-  //           this.router.navigateByUrl('/dashboard');
-  //         }
-  //       },
-  //       r => {
-  //         alert(r.error.error);
-  //       });
-  // }
- 
-
 
 }

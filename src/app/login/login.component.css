@@ -1,0 +1,16 @@
+.loginBox
+{
+    background-color: #f3f0f0;
+    padding: 2pc;
+    /* border: 1px solid #888888; */
+    padding: 10px;
+    box-shadow: 4px 4px #888888;
+}
+.h3class
+{
+    margin-left: 13px;
+}
+.loginbutton
+{
+    margin-left:3%;
+}

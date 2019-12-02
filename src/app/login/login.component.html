@@ -1,0 +1,35 @@
+
+  <div class="container">    
+    <div class="col-md-6 col-md-offset-3 loginBox">    
+        <h3 class="h3class">Log In</h3>    
+        <p *ngIf="message" class="text-center error">{{message}}</p>    
+      <form [formGroup]="loginForm" (ngSubmit)="login()">    
+          <div class="form-group clearfix" >    
+              <label for="userid" class="col-md-3 col-sm-5 col-xs-12">UserId</label>    
+              <div class="col-md-9 col-sm-7 col-xs-12">    
+                  <input type="text" class="form-control" formControlName="userid" />    
+                  <div *ngIf="loginForm.controls['userid'].invalid && (loginForm.controls['userid'].dirty || loginForm.controls['userid'].touched)" class="alert alert-danger">
+                    <div *ngIf="loginForm.controls['userid'].errors.required">
+                        Userid is required.
+                    </div>
+                </div>
+              </div>    
+          </div>    
+          <div class="form-group clearfix" >    
+            <label for="password" class="col-md-3 col-sm-5 col-xs-12">Password</label>    
+            <div class="col-md-9 col-sm-7 col-xs-12">    
+                <input type="password" class="form-control" formControlName="password"/>    
+              
+                <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert alert-danger">
+                    <div *ngIf="loginForm.controls['password'].errors.required">
+                      Password is required.
+                    </div>
+                </div>
+            </div>    
+          </div>    
+          <div class="col-xs-12 form-group">    
+            <button [disabled]="loginForm.pristine || loginForm.invalid" class="btn btn-success loginbutton" type="submit">Login</button>    
+          </div>    
+      </form>    
+    </div>    
+</div>   
